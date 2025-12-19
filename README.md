@@ -1,5 +1,11 @@
 # micro-racing
-multiplayer 3D isometric racing game written in WebGL 2.x. Steering(both): WSAD / Arrows.
+Multiplayer 3D isometric racing game written in WebGL 2.x. Steering(both): WSAD / Arrows.
+
+**Maintained by [RithyTep](https://github.com/RithyTep/micro-racing) © 2025**
+
+## Language Support
+- English (eng)
+- Khmer/ខ្មែរ (khm) - Player name generator with Khmer adjectives and animals
 
 ## Gameplay
 ![GIF](/doc/screens/gameplay.gif) <br />
@@ -45,41 +51,41 @@ yarn run build:production
 ### Neural Network Implementation
 
 **forward propagation:**
-https://github.com/Mati365/micro-racing/blob/master/src/packages/neural-network/src/unsafe/forwardPropagate.js
+https://github.com/RithyTep/micro-racing/blob/master/src/packages/neural-network/src/unsafe/forwardPropagate.js
 
 **backward propagation:**
-https://github.com/Mati365/micro-racing/blob/master/src/packages/neural-network/src/unsafe/backwardPropagate.js
+https://github.com/RithyTep/micro-racing/blob/master/src/packages/neural-network/src/unsafe/backwardPropagate.js
 
 **evolution population train generation:**
-https://github.com/Mati365/micro-racing/blob/master/src/packages/neural-network/src/genetic/forkPopulation.js#L70
+https://github.com/RithyTep/micro-racing/blob/master/src/packages/neural-network/src/genetic/forkPopulation.js#L70
 
 **ai car driver:**
-https://github.com/Mati365/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarNeuralAI.js
+https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarNeuralAI.js
 
 **ai cars trainer:**
-https://github.com/Mati365/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarNeuralTrainer.js
+https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarNeuralTrainer.js
 
 **cars intersection rays:**
-https://github.com/Mati365/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarIntersectRays.js
+https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarIntersectRays.js
 
 
 ### Quad Tree
 **implementation:**
-https://github.com/Mati365/micro-racing/blob/master/src/packages/quad-tree/src/index.js
+https://github.com/RithyTep/micro-racing/blob/master/src/packages/quad-tree/src/index.js
 
 Quad Tree handles multiple moving objects as list, stores only static objects
 
 ### CSS in JS implementation
-https://github.com/Mati365/micro-racing/tree/master/src/packages/fast-stylesheet
+https://github.com/RithyTep/micro-racing/tree/master/src/packages/fast-stylesheet
 
 ### Bezier lines and de Castelja algorithm implementation
-https://github.com/Mati365/micro-racing/blob/master/src/packages/beizer-lines/src/index.js
+https://github.com/RithyTep/micro-racing/blob/master/src/packages/beizer-lines/src/index.js
 
 ### Car steering logic based on Marco Monster docs
-https://github.com/Mati365/micro-racing/blob/master/src/network/shared/logic/physics/CarPhysicsBody.js#L43
+https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/physics/CarPhysicsBody.js#L43
 
 ### Server update loop
-https://github.com/Mati365/micro-racing/blob/master/src/network/server/RoomRacing.js#L148
+https://github.com/RithyTep/micro-racing/blob/master/src/network/server/RoomRacing.js#L148
 
 ## See also
 https://webcache.googleusercontent.com/search?q=cache%3A5cH3UfBvb2YJ%3Avodacek.zvb.cz%2Farchiv%2F681.html&hl=en&gl=us&strip=1&vwsrc=0&fbclid=IwAR2jxD6EayJZqvcOSNOBHgww35indUbC6pAeVA_3XtTCckCVeabjnbEuJvI <br />
@@ -95,7 +101,7 @@ HTML UI in AAA games:<br/>
 https://www.gdcvault.com/play/1022055/How-to-Implement-AAA-Game
 
 ## License
-[MIT](https://github.com/Mati365/kart-racing/blob/master/LICENSE.md)
+[MIT](https://github.com/RithyTep/micro-racing/blob/master/LICENSE.md) © 2025 RithyTep
 
 ## Resources
 Icons:

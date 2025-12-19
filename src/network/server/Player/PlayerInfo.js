@@ -123,7 +123,7 @@ export class PlayerRacingState {
 export default class PlayerInfo {
   constructor(
     {
-      nick = generateName(),
+      nick = generateName({lang: 'khm'}),
       id = uniqid(),
       kind = PLAYER_TYPES.HUMAN,
       racingState = null,
