@@ -5,7 +5,10 @@ nixPkgs = ["nodejs_20", "yarn", "cairo", "pango", "libjpeg", "giflib", "librsvg"
 cmds = ["yarn install"]
 
 [phases.build]
-cmds = ["NODE_OPTIONS=--openssl-legacy-provider yarn build:production"]
+cmds = ["export NODE_OPTIONS=--openssl-legacy-provider && yarn build:production"]
+
+[variables]
+NODE_OPTIONS = "--openssl-legacy-provider"
 
 [start]
 cmd = "node ./dist/api/server.js"
