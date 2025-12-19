@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "yarn", "cairo", "pango", "libjpeg", "giflib", "librsvg", "pixman", "pkg-config"]
+
+[phases.install]
+cmds = ["yarn install"]
+
+[phases.build]
+cmds = ["NODE_OPTIONS=--openssl-legacy-provider yarn build:production"]
+
+[start]
+cmd = "node ./dist/api/server.js"
