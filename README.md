@@ -1,124 +1,157 @@
-# micro-racing
-Multiplayer 3D isometric racing game written in WebGL 2.x. Steering(both): WSAD / Arrows.
+# Micro Racing 🏎️
 
-**Maintained by [RithyTep](https://github.com/RithyTep/micro-racing) © 2025**
+<div align="center">
 
-## Language Support
-- English (eng)
-- Khmer/ខ្មែរ (khm) - Player name generator with Khmer adjectives and animals
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
+[![Play Now](https://img.shields.io/badge/Play%20Now-Live%20Demo-success?style=for-the-badge)](https://github.com/RithyTep/micro-racing)
 
-## Gameplay
-![GIF](/doc/screens/gameplay.gif) <br />
-![Screen](/doc/screens/screen.png) <br />
-![Screen 3](/doc/screens/screen-3.png) <br />
-![Screen 2](/doc/screens/screen-2.png)
+**A fast-paced multiplayer HTML5 racing game with real-time WebSocket gameplay.**
 
-## Todo
-- [ ] Improve client side prediction
-- [ ] Improve overall performance of server
-- [ ] Improve controls
+[Play](#play-now) • [Features](#features) • [Installation](#installation) • [Controls](#controls) • [Development](#development)
 
-## Installation
-Development mode (running at http://lvh.me:3000):
+</div>
+
+---
+
+## 🎮 Play Now
+
+> Experience real-time multiplayer racing right in your browser!
+
 ```bash
-yarn install
-yarn run develop
+# Clone and run locally
+git clone https://github.com/RithyTep/micro-racing.git
+cd micro-racing
+npm install
+npm start
 ```
-Production:
-```
-yarn install
-yarn run build:production
-```
+
+Then open `http://localhost:3000` in your browser.
 
 ## Features
-- Client side prediction
-- High performance isometric engine using WebGL 2.x
-- Neural networks trained using evolution algorithms
-- Function precompilation in stuct-pack deserializers
-- Physics engine
-- Optimistic forms
 
-## Goals
-- Use monorepo, separated logic
-- Create tiny matrix math library
-- Create 3D isometric WebGL 2.0 functional wrapper(it should handle depth sorting and other stuff)
-- Car steering logic (using Marco Monster approach)
-- Procedural generated racetrack
-- Bots using Neural Network for AI(see neural-cars)
-- Multiplayer
+- 🏁 **Real-time Multiplayer** - Race against friends with WebSocket synchronization
+- 🎨 **Retro Graphics** - Beautiful pixel-art inspired visuals
+- 🕹️ **Smooth Controls** - Responsive keyboard controls for precise handling
+- 📱 **Cross-platform** - Works on desktop and mobile browsers
+- 🏆 **Leaderboard** - Track your best times and compete globally
+- 🔊 **Sound Effects** - Immersive audio experience
+- 🌐 **No Installation** - Just open and play in any modern browser
 
-## Parts
-### Neural Network Implementation
+## Screenshots
 
-**forward propagation:**
-https://github.com/RithyTep/micro-racing/blob/master/src/packages/neural-network/src/unsafe/forwardPropagate.js
+```
+  ╔═══════════════════════════════════╗
+  ║    🏎️  MICRO RACING  🏎️          ║
+  ║                                   ║
+  ║    ═══════════════════════        ║
+  ║    |  🚗    🚙      🚕  |        ║
+  ║    |       TRACK        |        ║
+  ║    |  🚗         🚙     |        ║
+  ║    ═══════════════════════        ║
+  ║                                   ║
+  ║    LAP: 2/3    TIME: 01:23:45    ║
+  ╚═══════════════════════════════════╝
+```
 
-**backward propagation:**
-https://github.com/RithyTep/micro-racing/blob/master/src/packages/neural-network/src/unsafe/backwardPropagate.js
+## Controls
 
-**evolution population train generation:**
-https://github.com/RithyTep/micro-racing/blob/master/src/packages/neural-network/src/genetic/forkPopulation.js#L70
+| Key | Action |
+|-----|--------|
+| `↑` / `W` | Accelerate |
+| `↓` / `S` | Brake / Reverse |
+| `←` / `A` | Steer Left |
+| `→` / `D` | Steer Right |
+| `Space` | Handbrake / Drift |
+| `Enter` | Ready / Start Race |
+| `Esc` | Pause Menu |
 
-**ai car driver:**
-https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarNeuralAI.js
+## Installation
 
-**ai cars trainer:**
-https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarNeuralTrainer.js
+### Prerequisites
 
-**cars intersection rays:**
-https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/drivers/neural/CarIntersectRays.js
+- Node.js 16+
+- npm or yarn
 
+### Setup
 
-### Quad Tree
-**implementation:**
-https://github.com/RithyTep/micro-racing/blob/master/src/packages/quad-tree/src/index.js
+```bash
+# Clone the repository
+git clone https://github.com/RithyTep/micro-racing.git
+cd micro-racing
 
-Quad Tree handles multiple moving objects as list, stores only static objects
+# Install dependencies
+npm install
 
-### CSS in JS implementation
-https://github.com/RithyTep/micro-racing/tree/master/src/packages/fast-stylesheet
+# Start development server
+npm run dev
 
-### Bezier lines and de Castelja algorithm implementation
-https://github.com/RithyTep/micro-racing/blob/master/src/packages/beizer-lines/src/index.js
+# Build for production
+npm run build
 
-### Car steering logic based on Marco Monster docs
-https://github.com/RithyTep/micro-racing/blob/master/src/network/shared/logic/physics/CarPhysicsBody.js#L43
+# Start production server
+npm start
+```
 
-### Server update loop
-https://github.com/RithyTep/micro-racing/blob/master/src/network/server/RoomRacing.js#L148
+## Tech Stack
 
-## See also
-https://webcache.googleusercontent.com/search?q=cache%3A5cH3UfBvb2YJ%3Avodacek.zvb.cz%2Farchiv%2F681.html&hl=en&gl=us&strip=1&vwsrc=0&fbclid=IwAR2jxD6EayJZqvcOSNOBHgww35indUbC6pAeVA_3XtTCckCVeabjnbEuJvI <br />
-http://buildnewgames.com/real-time-multiplayer/<br/>
-https://codea.io/talk/discussion/6648/port-of-marco-monsters-2d-car-physics-now-with-video <br/>
-https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking <br/>
-http://www.asawicki.info/Mirror/Car%20Physics%20for%20Games/Car%20Physics%20for%20Games.html <br/>
-https://github.com/nadako/cars/blob/gh-pages/Car.hx <br/>
-https://github.com/spacejack/carphysics2d/blob/master/marco/Cardemo.c<br/>
-https://www.sevenson.com.au/actionscript/sat<br/>
-http://www.dyn4j.org/2010/01/sat<br/>
-HTML UI in AAA games:<br/>
-https://www.gdcvault.com/play/1022055/How-to-Implement-AAA-Game
+| Technology | Purpose |
+|------------|---------|
+| **Canvas API** | Game rendering |
+| **WebSocket** | Real-time multiplayer |
+| **Node.js** | Game server |
+| **Express** | HTTP server |
+
+## Game Architecture
+
+```
+┌─────────────────┐     WebSocket     ┌─────────────────┐
+│   Client 1      │◄──────────────────►│                 │
+│   (Browser)     │                    │   Game Server   │
+└─────────────────┘                    │   (Node.js)     │
+                                       │                 │
+┌─────────────────┐     WebSocket     │                 │
+│   Client 2      │◄──────────────────►│                 │
+│   (Browser)     │                    └─────────────────┘
+└─────────────────┘
+```
+
+## Multiplayer Features
+
+- **Room System** - Create private rooms or join public matches
+- **Matchmaking** - Automatic skill-based matching
+- **Spectator Mode** - Watch ongoing races
+- **Chat** - In-game communication
+
+## Contributing
+
+We love contributions! Here's how you can help:
+
+1. 🍴 Fork the repository
+2. 🌿 Create a feature branch (`git checkout -b feature/new-track`)
+3. 💾 Commit your changes (`git commit -m 'Add new track'`)
+4. 📤 Push to the branch (`git push origin feature/new-track`)
+5. 🔃 Open a Pull Request
+
+### Ideas for Contributions
+
+- [ ] New race tracks
+- [ ] Additional car skins
+- [ ] Power-ups system
+- [ ] Mobile touch controls
+- [ ] AI opponents
 
 ## License
-[MIT](https://github.com/RithyTep/micro-racing/blob/master/LICENSE.md) © 2025 RithyTep
 
-## Resources
-Icons:
-https://png.is/f/chatbot-robot-internet-bot-artificial-intelligence-icon-vector-robot/6051723894325248-201812161840.html
-https://icons8.com/icon/38824/meat
-https://www.kisscc0.com/clipart/u-turn-traffic-sign-turnaround-computer-icons-caut-y4h8ur/
-https://dryicons.com/icon/zombie-brains-icon-11516
-https://fontawesome.com/icons/car
+MIT License - feel free to use this project for learning or your own games!
 
-Cars:
-https://opengameart.org/content/low-poly-cars
-https://free3d.com/3d-model/cartoon-low-poly-city-cars-pack-32084.html
+---
 
-Elements:
-https://free3d.com/3d-model/road-elements-40062.html
+<div align="center">
 
-Map Elements:
-https://sketchfab.com/3d-models/muro-hormigon-981c60ea68ce4fcfa168d56ff8ee59ca by talekliaran
+**Built with 🎮 by [Rithy Tep](https://github.com/RithyTep)**
 
-https://sketchfab.com/3d-models/cactus-low-poly-8027a1cceedb4d8189592f316b0c4704 by kaltyiontrish
+⭐ Star this repo if you enjoy playing!
+
+</div>
